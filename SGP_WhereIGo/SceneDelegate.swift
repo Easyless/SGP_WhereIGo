@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  SGP_WhereIGo
-//
-//  Created by KPU_GAME on 2021/05/11.
-//
+
 
 import UIKit
 
