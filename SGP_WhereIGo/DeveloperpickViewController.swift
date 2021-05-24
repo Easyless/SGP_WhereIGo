@@ -18,10 +18,11 @@ class DeveloperpickViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageImages = [UIImage(named: "photo1.png")!,
-                      UIImage(named: "photo2.png")!,
-                      UIImage(named: "photo3.png")!,
-                      UIImage(named: "photo4.png")!
+        pageImages = [UIImage(named: "photo5.jpeg")!,
+                      UIImage(named: "photo4.jpeg")!,
+                      UIImage(named: "photo3.jpeg")!,
+                      UIImage(named: "photo2.jpeg")!,
+                      UIImage(named: "photo1.jpeg")!
                     ]
         let pageCount = pageImages.count
         

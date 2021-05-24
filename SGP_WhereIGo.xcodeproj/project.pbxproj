@@ -24,6 +24,10 @@
 		342FA563265BB72E00663BB2 /* photo1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 342FA55F265BB72D00663BB2 /* photo1.jpeg */; };
 		342FA564265BB72E00663BB2 /* photo4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 342FA560265BB72E00663BB2 /* photo4.jpeg */; };
 		342FA579265BC2EF00663BB2 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 342FA578265BC2EF00663BB2 /* title.png */; };
+		342FA586265BED0A00663BB2 /* photo5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 342FA585265BED0A00663BB2 /* photo5.jpeg */; };
+		342FA58D265BF00200663BB2 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342FA58A265BF00100663BB2 /* Hospital.swift */; };
+		342FA58E265BF00200663BB2 /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342FA58B265BF00100663BB2 /* HospitalTableViewController.swift */; };
+		342FA58F265BF00200663BB2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342FA58C265BF00200663BB2 /* MapViewController.swift */; };
 		7788725D264A64AC00B922D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7788725C264A64AC00B922D4 /* AppDelegate.swift */; };
 		7788725F264A64AC00B922D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7788725E264A64AC00B922D4 /* SceneDelegate.swift */; };
 		77887261264A64AC00B922D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77887260264A64AC00B922D4 /* ViewController.swift */; };
@@ -69,6 +73,10 @@
 		342FA55F265BB72D00663BB2 /* photo1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpeg; sourceTree = "<group>"; };
 		342FA560265BB72E00663BB2 /* photo4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo4.jpeg; sourceTree = "<group>"; };
 		342FA578265BC2EF00663BB2 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		342FA585265BED0A00663BB2 /* photo5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo5.jpeg; sourceTree = "<group>"; };
+		342FA58A265BF00100663BB2 /* Hospital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		342FA58B265BF00100663BB2 /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
+		342FA58C265BF00200663BB2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		77887259264A64AC00B922D4 /* SGP_WhereIGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGP_WhereIGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788725C264A64AC00B922D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7788725E264A64AC00B922D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 		344F2CEF265B76460059D8E1 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				342FA585265BED0A00663BB2 /* photo5.jpeg */,
 				342FA578265BC2EF00663BB2 /* title.png */,
 				342FA55F265BB72D00663BB2 /* photo1.jpeg */,
 				342FA55E265BB72D00663BB2 /* photo2.jpeg */,
@@ -157,6 +166,9 @@
 		7788725B264A64AC00B922D4 /* SGP_WhereIGo */ = {
 			isa = PBXGroup;
 			children = (
+				342FA58A265BF00100663BB2 /* Hospital.swift */,
+				342FA58B265BF00100663BB2 /* HospitalTableViewController.swift */,
+				342FA58C265BF00200663BB2 /* MapViewController.swift */,
 				7788725C264A64AC00B922D4 /* AppDelegate.swift */,
 				7788725E264A64AC00B922D4 /* SceneDelegate.swift */,
 				77887260264A64AC00B922D4 /* ViewController.swift */,
@@ -304,6 +316,7 @@
 				342FA532265BAF3900663BB2 /* bookmark.jpeg in Resources */,
 				77887266264A64AE00B922D4 /* Assets.xcassets in Resources */,
 				342FA562265BB72E00663BB2 /* photo2.jpeg in Resources */,
+				342FA586265BED0A00663BB2 /* photo5.jpeg in Resources */,
 				342FA50B265BA1A800663BB2 /* cafe1.png in Resources */,
 				342FA52A265BAF2F00663BB2 /* paramacy1.png in Resources */,
 				342FA564265BB72E00663BB2 /* photo4.jpeg in Resources */,
@@ -336,7 +349,10 @@
 				342FA559265BB47800663BB2 /* DeveloperpickViewController.swift in Sources */,
 				77887261264A64AC00B922D4 /* ViewController.swift in Sources */,
 				7788725D264A64AC00B922D4 /* AppDelegate.swift in Sources */,
+				342FA58D265BF00200663BB2 /* Hospital.swift in Sources */,
 				7788725F264A64AC00B922D4 /* SceneDelegate.swift in Sources */,
+				342FA58E265BF00200663BB2 /* HospitalTableViewController.swift in Sources */,
+				342FA58F265BF00200663BB2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
