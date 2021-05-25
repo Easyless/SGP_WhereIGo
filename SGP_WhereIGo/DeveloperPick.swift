@@ -2,7 +2,6 @@ import UIKit
 
 class DeveloperPick: UIViewController, UIScrollViewDelegate{
 
-    
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -13,10 +12,10 @@ class DeveloperPick: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pageImages = [UIImage(named: "photo1.jpeg")!,
-                      UIImage(named: "photo2.jpeg")!,
+        pageImages = [UIImage(named: "photo4.jpeg")!,
                       UIImage(named: "photo3.jpeg")!,
-                      UIImage(named: "photo4.jpeg")!
+                      UIImage(named: "photo1.jpeg")!,
+                      UIImage(named: "photo2.jpeg")!
                     ]
         let pageCount = pageImages.count
 
