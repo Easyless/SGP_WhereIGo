@@ -1,8 +1,13 @@
 import UIKit
 import Speech
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
     
+    @IBOutlet weak var micButton: UIButton!
+    
+    
+    var audioController = AudioController()
     var selectedCategory : String = ""
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))!
@@ -14,15 +19,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var images = [UIImage]()
+        let mic1img = UIImage(named: "animatedimg/mic1.png")!
+        let mic2img = UIImage(named: "animatedimg/mic2.png")!
+        images.append(mic1img)
+        images.append(mic2img)
+        micButton.imageView!.animationImages = images
+        micButton.imageView!.animationDuration = 0.9
+        micButton.imageView!.animationRepeatCount = 10
+        audioController.preloadAudioEffects(audioFileNames: AudioEffectFiles)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var speechButtonOutlet: UIButton!
    
     @IBAction func speechButton(_ sender: Any) {
+        audioController.playerEffect(name: SoundDing)
         if(!isRecord){
             isRecord = true
             try! startSession()
+            
+            micButton.imageView?.startAnimating()
         }
         else{
             isRecord = false
@@ -30,6 +47,7 @@ class ViewController: UIViewController {
                 audioEngine.stop()
                 speechRecognitionRequest?.endAudio()
             }
+            micButton.imageView?.stopAnimating()
         }
     }
     
@@ -44,7 +62,29 @@ class ViewController: UIViewController {
         selectedCategory = "생활서비스"
     }
     
+    @IBAction func StoreButton(_ sender: Any) {
+        selectedCategory = "소매"
+    }
+    
+    @IBAction func EduButton(_ sender: Any) {
+        selectedCategory = "학문/교육"
+    }
+    
+    @IBAction func REButton(_ sender: Any) {
+        selectedCategory = "부동산"
+    }
+    
+    @IBAction func AllButton(_ sender: Any) {
+        selectedCategory = ""
+    }
+    
+    @IBAction func SearchButton(_ sender: Any) {
+        selectedCategory = searchBar.text!
+    }
+    
     func startSession() throws{
+ 
+        
         if let recognitionTask = speechRecognitionTask{
             recognitionTask.cancel()
             self.speechRecognitionTask = nil
@@ -97,5 +137,15 @@ class ViewController: UIViewController {
             dest?.pascategory = self.selectedCategory
         }
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        selectedCategory = searchBar.text!
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "mapView") as! Parsing_Radius
+        vc.pascategory = searchBar.text!
+        present(vc,animated: true, completion: nil)
+        self.view.endEditing(true)
+    }
+    
 }
+
 

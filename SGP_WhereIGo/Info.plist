@@ -71,5 +71,9 @@
 	</array>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>음성 인식 권한</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>위치 권한</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>위치 권한</string>
 </dict>
 </plist>

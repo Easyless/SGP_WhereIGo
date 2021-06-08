@@ -2,30 +2,25 @@ import UIKit
 
 class DeveloperPick: UIViewController, UIScrollViewDelegate{
 
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet var scrollView: UIScrollView!
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pageImages = [UIImage(named: "photo4.jpeg")!,
+        pageImages = [UIImage(named: "photo1.jpeg")!,
+                      UIImage(named: "photo2.jpeg")!,
                       UIImage(named: "photo3.jpeg")!,
-                      UIImage(named: "photo1.jpeg")!,
-                      UIImage(named: "photo2.jpeg")!
+                      UIImage(named: "photo4.jpeg")!
                     ]
-        let pageCount = pageImages.count
 
-        pageControl.currentPage = 0
-        pageControl.numberOfPages = pageCount
-
-        for _ in 0..<pageCount{
+        for _ in 0..<pageImages.count{
             pageViews.append(nil)
         }
-
+    
         let pagesScrollViewSize = scrollView.frame.size
         scrollView.contentSize = CGSize(width: pagesScrollViewSize.width*CGFloat(pageImages.count), height:pagesScrollViewSize.height )
 
@@ -62,11 +57,11 @@ class DeveloperPick: UIViewController, UIScrollViewDelegate{
             pageViews[page] = nil
         }
     }
+    
     func loadVisiblePages(){
         let pageWidth = scrollView.frame.width
         let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
 
-        pageControl.currentPage = page
 
         let firstPage = page - 1
         let lastPage = page + 1
@@ -88,6 +83,4 @@ class DeveloperPick: UIViewController, UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView){
        loadVisiblePages()
     }
-
-
 }
